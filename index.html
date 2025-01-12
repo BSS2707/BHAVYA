@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bhavya S Solanki</title>
     <link rel="stylesheet" href="style.css">
+    
     <link rel="website icon" type="png"  href="logo.png">
 </head>
 <body>
@@ -37,8 +38,10 @@
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem eaque ullam tempore perspiciatis iusto neque repellendus, minus aperiam voluptas accusantium, eos, voluptatum blanditiis fugiat enim sed hic. Tenetur ex amet consectetur quibusdam repellat quas sit debitis recusandae eaque, rem quod eius quasi aut saepe commodi, illo perspiciatis reprehenderit dolorem a mollitia unde! Laudantium excepturi atque esse, animi iusto modi accusantium that condition well ben.
         </p> </h4>
         </div>
-        <button class="btn"  onclick="document.location='https://www.instagram.com/bhavya.mj/'">Follow</button>
+        <button class="btn"  onclick="document.location='https://www.instagram.com/bhavya_._007/'">Follow</button>
         <button class="btn1"  onclick="document.location='https://github.com/BSS2707'">Visit Github</button>
+        <section class="two">
+     <div id="columnchart_values" style="width: 900px; height: 300px;" ></div>
     </section>
         <h1 class="con" id="contact">
             Contact Us
@@ -70,7 +73,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem eaque ullam
 
 
 
-        <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
           <!-- Element to contain animated typing -->
  
 
@@ -85,6 +88,39 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem eaque ullam
       loop: true
     });
   </script>
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+  google.charts.load("current", {packages:['corechart']});
+  google.charts.setOnLoadCallback(drawChart);
+  function drawChart() {
+    var data = google.visualization.arrayToDataTable([
+      ["Lan And hobby", "Density", { role: "style" } ],
+      ["Html", 85, "#b87333"],
+      ["Css", 30, "silver"],
+      ["Cricket", 100, "gold"],
+      ["Gaming", 25, "color: #e5e4e2"]
+    ]);
+
+    var view = new google.visualization.DataView(data);
+    view.setColumns([0, 1,
+                     { calc: "stringify",
+                       sourceColumn: 1,
+                       type: "string",
+                       role: "annotation" },
+                     2]);
+
+    var options = {
+      title: "Exparince And Work",
+      width: 600,
+      height: 400,
+      bar: {groupWidth: "95%"},
+      legend: { position: "none" },
+    };
+    var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values"));
+    chart.draw(view, options);
+}
+</script>
 </body>   
 </body>
 </html>
